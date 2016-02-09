@@ -14,3 +14,21 @@ gd: find where a var is defined
 
 gk gj: can move up/down warpped line
 
+- cp6 
+vim scripting  
+EX:  
+```
+:syntax match comments "/\*.*\*/"
+:syntax keyword vars x y
+:syntax match symbols "[{}();=]"
+:syntax keyword keywords if return
+:highlight vars ctermfg=red guifg=blue
+:highlight symbols ........
+:highlight comments
+:highlight keywords
+```
+
+Region,can contains hilighted function syntax. using contains
+```
+:syntax region commentregion start="/\/\*/ end=/\*\// contains=keyword1,keywords2
+```
